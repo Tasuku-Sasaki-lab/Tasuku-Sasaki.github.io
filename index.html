@@ -5,7 +5,7 @@
     <!--- basic page needs
     ================================================== -->
     <meta charset="utf-8">
-    <title>Ethos</title>
+    <title>佐々木佑　ポートフォリオ</title>
     <meta name="description" content="">
     <meta name="author" content="">
 
@@ -25,9 +25,9 @@
 
     <!-- favicons
     ================================================== -->
-    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="pple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="avicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="avicon-16x16.png">
     <link rel="manifest" href="site.webmanifest">
 
 </head>
@@ -61,13 +61,14 @@
             <nav class="row header-nav-wrap">
                 <ul class="header-nav">
                     <li><a class="smoothscroll" href="#hero" title="Intro">Home</a></li>
-                    <li><a class="smoothscroll" href="#about" title="About">About</a></li>
-                    <li><a class="smoothscroll" href="#services" title="Services">Services</a></li>
-                    <li><a class="smoothscroll" href="#portfolio" title="Works">Works</a></li>
-                    <li><a href="mailto:#0" title="Contact us">Say Hello</a></li>
-
+                    <li><a class="smoothscroll" href="#about" title="About">Profile</a></li>
+                    <li><a class="smoothscroll" href="#services" title="Services">Works</a></li>
+                    <li><a class="smoothscroll" href="#portfolio" title="Works">Others</a></li>
+                    <li><a href="mailto:t.sasaki.revol@gmail.com" title="Contact us">Contact</a></li>
+					<!--
 					<li><a class="smoothscroll" href="" title="Intro">Competitive programming</a></li>
                     <li><a class="smoothscroll" href="" title="About">Math</a></li>
+					-->
                 </ul>
             </nav> <!-- end header-nav-wrap -->
 
@@ -80,32 +81,44 @@
 
     </header> 
 
+	
+	<script type="text/javascript">
+		let image_data = document.getElementById('hero');
+		//console.log(window.innerWidth );
+		if(window.innerWidth > 786){
+			//console.log('ok');
+			image_data.src="images/26955_2.jpg";
+		}
+		</script>
 
     <!-- hero
     ================================================== -->
-    <section id="hero" class="s-hero target-section" data-parallax="scroll" data-image-src="images/hero-bg-3000.jpg" data-natural-width=3000 data-natural-height=2000 data-position-y=center>
+    <section id="hero" class="s-hero target-section" data-parallax="scroll" data-image-src="images/26955_3.jpg" data-natural-width=1500 data-natural-height=2000 data-position-y=center>
+
+
 
         <div class="row hero-content">
 
             <div class="column large-full">
 
                 <h1>
-                Hello, I'm John Doe, <br>
-                a frontend developer <br>
-                & designer currently <br>
-                based somewhere.
-                </h1>
+                佐々木　佑</h1>
+				<h3 style="color: white;">ささき　たすく<br>
+					PM システム設計
+										顧客対応 プログラマー</h3>
 
                 <ul class="hero-social">
                     <li>
-                        <a href="#0" title="">Twitter</a>
+                        <a href="mailto:t.sasaki.revol@gmail.com" title="">Mail</a>
                     </li>
                     <li>
-                        <a href="#0" title="">Behance</a>
+                        <a href="https://github.com/tasuku-revol" title="">Github</a>
                     </li>
+					<!--
                     <li>
-                        <a href="#0" title="">Dribbble</a>
+                        <a href="#0" title="">Instagram</a>
                     </li>
+				-->
                 </ul> <!-- end hero-social -->
 
             </div> 
@@ -133,24 +146,29 @@
                 <div class="column large-6 medium-8 tab-full">
 
                     <div class="section-intro" data-num="01" data-aos="fade-up">
-                        <h3 class="subhead">About Me</h3>
-                        <h1 class="display-1">I'm the kind of person who isn't afraid of challenges.</h1>
+                        <h3 class="subhead">Profile</h3>
+                        <h1 class="display-1">I always pay my respect to all stakeholders. </h1>
                     </div>
 
                     <div class="profile-pic" data-aos="fade-up">
-                        <img src="images/profile-pic.jpg" 
-                             srcset="images/profile-pic.jpg 1x, images/profile-pic@2x.jpg 2x" alt="">
+                        <img src="images/profile.jpg" 
+                             srcset="images/profile.jpg 1x, images/profile.jpg 2x" alt="">
                     </div>
 
                     <h3 data-aos="fade-up">Profile</h3>
 
                     <p data-aos="fade-up">
-                    In consectetuer turpis ut velit. Praesent metus tellus, elementum eu, semper a, adipiscing nec, purus. 
-                    Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; In ac dui quis 
-                    mi consectetuer lacinia. Fusce neque. Curabitur nisi. Suspendisse nisl elit, rhoncus eget, elementum ac, 
-                    condimentum eget, diam. Phasellus magna. Duis arcu tortor, suscipit eget, imperdiet nec, imperdiet iaculis, 
-                    ipsum. Maecenas egestas arcu quis ligula mattis placerat. Suspendisse pulvinar, augue ac venenatis condimentum, 
-                    sem libero volutpat nibh, nec pellentesque velit pede quis nunc.
+					<!--
+                    常に変化を受け入れる人間でありたいと考えています。お客様の価値観や立場を受け入れる。時代の潮流を受け入れる。
+					技術革新を受け入れる。<br>
+					技術やプロダクトの押し売りではなく、お客様の意向に沿った、お客様の意見や価値観、さらには人格や社会環境までを尊重し、お付き合いをできればと考えております。<br>
+					もちろん、技術屋としてお客様の考えに反対の立場をとることもあります。その場合でも、相手を否定することはしません。コミュニケーションをとり、優先順位や価値判断基準をすり合わします。
+					-->
+					プログラミング歴：3年<br>大学入学と同時にＣに出会う<br><br>
+					WＥＢ系プログラミング：1年半<br>株式会社RreVOL.参画時から触り始める<br>
+					<br>
+					扱える言語：<br>C,C#,PHP,JAVA,Python,HTML,CSS,Javascript,OCTAVE,MATLAB,SCALA<br><br>
+					フレームワーク：<br>Laravel,Jango,React,Bootstrap
                     </p>
 
                 </div>
@@ -172,8 +190,8 @@
                     <div class="position">
                         <div class="position__header">
                             <h6>
-                                <span class="position__co">Kobe Univercity</span>
-                                <span class="position__pos">Computer Science and Systems Engineering</span>
+                                <span class="position__co">神戸大学</span>
+                                <span class="position__pos">工学部情報知能工学科</span>
                             </h6>
                             <div class="position__timeframe">
                                 April 2019 - Present
@@ -181,9 +199,8 @@
                         </div>
 
                         <p>
-							Department of Computer Science and Systems Engineering is devoted to such themes as 
-							"pursuit of creative process through intelligence" and "creation of the next generation 
-							intellectualized information systems". <a href="http://www.csi.kobe-u.ac.jp/cs/site/en/index.html">here</a>
+							情報知能工学科の授業科目は、基礎科目と先進的・学際的な専門科目から構成されています。
+							これらの基礎および専門知識を統合・融合することにより、高度情報化社会の様々な技術問題を解決できる能力を養います。<a href="http://www.csi.kobe-u.ac.jp/cs/site/en/index.html" target="_blank">here</a>
                         </p>
                     </div>
                 </div> <!-- end column -->
@@ -191,19 +208,24 @@
                     <div class="position">
                         <div class="position__header">
                             <h6>
-                                <span class="position__co">Re-VOL.</span>
-                                <span class="position__pos">IT Manager</span>
+                                <span class="position__co">株式会社Re-VOL.</span>
+                                <span class="position__pos">IT部門責任者</span>
                             </h6>
                             <div class="position__timeframe">
-                                August 2020 - Present
+                                August 2020 - August 2021
                             </div>
                         </div>
 
                         <p>
-							As the person in charge of the business of listening to customer requests, 
+							<!--
+									As the person in charge of the business of listening to customer requests, 
 							developing and delivering systems, I have been in charge of a number of projects.
 							I provide consulting to customers, system design, and products.
-						<a href="https://re-vol.net/">https://re-vol.net/</a>                
+							-->
+							株式会社Re-VOL.は神戸大学生が立ち上げたスタートアップ。学生のインターンを仲介する人材派遣業とWEBシステムの受託開発事業を展開する。<br>
+							2020年の秋にRe-VOL.に初めてのエンジニアとして参画し、自社サービスの開発や受託開発のプロジェクトを担当した。<br>
+							2021年8月を持ってRre-VOL.は暖簾を下した。
+						<a href="https://re-vol.net/" target="_blank">here</a>                
                         </p>
                     </div>
                 </div> <!-- end column -->
@@ -265,7 +287,7 @@
 
             <div class="column large-6 s-services__leftcol">
                 <div class="section-intro" data-num="02" data-aos="fade-up">
-                    <h3 class="subhead">Expertise</h3>
+                    <h3 class="subhead">Works</h3>
 
                     <h1 class="display-1">
                     I focus on crafting web experiences
@@ -274,11 +296,10 @@
                 </div>
 
                 <p class="lead" data-aos="fade-up">
-                Suspendisse eu ligula. Duis arcu tortor, suscipit eget, 
-                imperdiet nec, imperdiet iaculis, ipsum. Nulla facilisi.
-                Etiam rhoncus. Praesent blandit laoreet nibh.
-                Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. 
-                Cras sagittis. Praesent egestas tristique nibh.
+				行った仕事のうち、大規模なものを取り上げる。<br>
+                数件の受託開発と自社開発<br>
+				1人で開発することもあるが、チームで開発することの方が多い。<br>
+				
                 </p>
             </div> <!-- end  s-services--leftcol -->
 
@@ -286,82 +307,84 @@
                 <ul class="services-list" data-aos="fade-up">
                     <li class="services-list__item is-active">
                         <div class="services-list__item-header">
-                            <h5>Product Design</h5>
+                            <h5>日報　3行提案システム</h5>
                         </div>
                         <div class="services-list__item-body">
                             <p>
-                            Fusce egestas elit eget lorem. Donec venenatis vulputate lorem. 
-                            Nam at tortor in tellus interdum sagittis. Vestibulum fringilla 
-                            pede sit amet augue. Praesent blandit laoreet nibh.
-                            Donec quam felis, ultricies nec, pellentesque eu.
+							受託金額：180万円<br>開発日数：半年<br>顧客：社会医療法人（社員数百人）<br>
+							全社員が毎日、3行でトップに提案・報告する。<br>
+							php Javascript html css 
+							<a  href="detail/daily.html" target="_blank">詳細</a><br>
+							<br>
+							<a  href="http://lipnext.sakura.ne.jp/main/loginpage.php" target="_blank">体験版</a>　ID:test@jp.com　Pass:pass
                             </p>
                         </div>
                     </li> <!-- services-list__item -->
                     <li class="services-list__item">
                         <div class="services-list__item-header">
-                            <h5>Branding</h5>
+                            <h5>ボトル・顧客管理</h5>
                         </div>
                         <div class="services-list__item-body">
                             <p>
-                            Sed cursus turpis vitae tortor. Sed aliquam ultrices mauris. 
-                            Fusce fermentum. Curabitur turpis. Nunc egestas, augue at pellentesque 
-                            laoreet, felis eros vehicula leo, at malesuada velit leo quis pede. 
-                            In consectetuer turpis ut velit. Curabitur at lacus.
+								受託金額：３０万円<br>開発日数：半年<br>顧客：会員制バー<br>
+								来店した人を自動で識別し、顧客情報とともにキープしているボトルを表示する。<br>
+								php Javascript html css <br>
+								<br>
+								体験版はありません。
                             </p>
                         </div>
                     </li> <!-- services-list__item -->
                     <li class="services-list__item">
                         <div class="services-list__item-header">
-                            <h5>Frontend Development</h5>
+                            <h5>インターン統合サイト</h5>
                         </div>
                         <div class="services-list__item-body">
                             <p>
-                            Suspendisse non nisl sit amet velit hendrerit rutrum. Etiam vitae tortor. 
-                            Ut tincidunt tincidunt erat. Praesent nonummy mi in odio. Praesent ut 
-                            ligula non mi varius sagittis. Curabitur turpis. Nunc egestas, augue at pellentesque 
-                            laoreet, felis eros vehicula leo, at malesuada velit leo quis pede.
+								受託金額：自社サービス<br>開発日数：半年<br>顧客：自社<br>
+								企業がインターンを掲載し募集。ユーザーが申し込み、選考・採用まで行えるプラットフォーム。<br>
+								php Javascript html css <br>
+								
+								<a  href="detail/lip.html" target="_blank">詳細</a><br>
+								<br>
+								<a  href="https://lipnext.sakura.ne.jp/main.php" target="_blank">体験版</a>　example@jp.com　Pass:pass
                             </p>
                         </div>
                     </li> <!-- services-list__item -->
                     <li class="services-list__item">
                         <div class="services-list__item-header">
-                            <h5>UX Research</h5>
+                            <h5>ECサイト　</h5>
                         </div>
                         <div class="services-list__item-body">
                             <p>
-                            Nullam quis ante. Sed libero. Curabitur at lacus ac velit ornare lobortis. 
-                            Morbi nec metus. Aenean vulputate eleifend tellus. Nullam vel sem. Nam ipsum risus, 
-                            rutrum vitae, vestibulum eu, molestie vel, lacus. Phasellus ullamcorper ipsum rutrum nunc. 
-                            Cras dapibus. Praesent egestas neque eu enim.
+                            まだ公開しておりません。
                             </p>
                         </div>
                     </li> <!-- services-list__item -->
                     <li class="services-list__item">
                         <div class="services-list__item-header">
-                            <h5>Visual Design</h5>
+                            <h5>スクレイピング</h5>
                         </div>
                         <div class="services-list__item-body">
                             <p>
-                            Ut id nisl quis enim dignissim sagittis. Pellentesque egestas, neque sit amet convallis 
-                            pulvinar, justo nulla eleifend augue, ac auctor orci leo non est. Phasellus volutpat, 
-                            metus eget egestas mollis, lacus lacus blandit dui, id egestas quam mauris ut lacus. 
-                            Cras dapibus. Praesent adipiscing.
+                           まだ公開しておりません。
                             </p>
                         </div>
                     </li> <!-- services-list__item -->
+					
                     <li class="services-list__item">
                         <div class="services-list__item-header">
-                            <h5>E-Commerce</h5>
+                            <h5>インターン紹介</h5>
                         </div>
                         <div class="services-list__item-body">
                             <p>
-                            Praesent ac sem eget est egestas volutpat. Nam pretium turpis et arcu. Quisque ut nisi. 
-                            Vestibulum rutrum, mi nec elementum vehicula, eros quam gravida nisl, id fringilla neque 
-                            ante vel mi. Phasellus dolor. Aenean vulputate eleifend tellus. Nullam vel sem. Nam ipsum risus, 
-                            rutrum vitae, vestibulum eu, molestie vel.
+								受託金額：自社サービス<br>開発日数：2週間<br>顧客：自社<br>
+								インターンの紹介のみを行うサイト。<br>
+								php Javascript html css <br>
+								<a href="https://revoltest.sakura.ne.jp/LIP_NEW_MODEL/main/main.php">体験版</a>
                             </p>
                         </div>
-                    </li> <!-- services-list__item -->
+                    </li> 
+				<!-- services-list__item -->
                 </ul> <!-- end services-list -->
             </div>
 
@@ -377,7 +400,7 @@
         <div class="row s-portfolio__header">
             <div class="column large-6 medium-8 tab-full">
                 <div class="section-intro" data-num="03" data-aos="fade-up">
-                    <h3 class="subhead">Portfolio</h3>
+                    <h3 class="subhead">Others</h3>
                     <h1 class="display-1">
                         A selection of recent projects I have worked on.
                     </h1>
@@ -390,75 +413,84 @@
             <div class="column" data-aos="fade-up">
                 <div class="folio-item">
                     <div class="folio-item__thumb">
-                        <a class="folio-item__thumb-link" href="images/portfolio/gallery/g-windows-in-the-city.jpg" title="Windows in The City" data-size="1050x700">
-                            <img src="images/portfolio/windows-in-the-city.jpg" 
-                                 srcset="images/portfolio/windows-in-the-city.jpg 1x, images/portfolio/windows-in-the-city@2x.jpg 2x" alt="">
+                        <a class="folio-item__thumb-link" href="images/image1.jpg" title=">Hack Kobe" data-size="1050x700">
+                            <img src="images/image1.jpg" 
+                                 slrcset="images/portfolio/windows-in-the-city.jpg 1x, images/portfolio/windows-in-the-city@2x.jpg 2x" alt=""  >
                         </a>
                     </div>
                     <div class="folio-item__info">
-                        <div class="folio-item__cat">Branding</div>
-                        <h4 class="folio-item__title">Windows in The City</h4>
+                        <div class="folio-item__cat">LP</div>
+                        <h4 class="folio-item__title">Hack Kobe</h4>
                     </div>
-                    <a href="https://www.behance.net/" title="Project Link" class="folio-item__project-link">Project Link</a>
+                    <a href="https://revoltest.sakura.ne.jp/ryoso/index.html" title="Project Link" class="folio-item__project-link" target="_blank">Project Link</a>
+					
                     <div class="folio-item__caption">
-                        <p>Vero molestiae sed aut natus excepturi. Et tempora numquam. Temporibus iusto quo.Unde dolorem corrupti neque nisi.</p>
+                        <p>優秀なデザイナーのコーディングを担当させていただいた</p>
+                    </div>
+				
+                </div>
+            </div> <!-- end column -->
+            <div class="column" data-aos="fade-up">
+                <div class="folio-item">
+                    <div class="folio-item__thumb">
+                        <a class="folio-item__thumb-link" href="images/image2.jpg" title=">新事業　仮説検証" data-size="1050x700">
+                            <img src="images/image2.jpg" 
+                                 sjrcset="images/portfolio/building-blocks.jpg 1x, images/portfolio/building-blocks@2x.jpg 2x" alt=""  >
+                        </a>
+                    </div>
+                    <div class="folio-item__info">
+                        <div class="folio-item__cat">LP</div>
+                        <h4 class="folio-item__title">新事業　仮説検証</h4>
+                    </div>
+                    <a href="https://revoltest.sakura.ne.jp/recruit/index.html" title="Project Link" class="folio-item__project-link"　target="_blank">Project Link</a>
+                    <div class="folio-item__caption">
+                        <p>優秀なデザイナーのコーディングを担当させていただいた</p>
                     </div>
                 </div>
             </div> <!-- end column -->
             <div class="column" data-aos="fade-up">
                 <div class="folio-item">
                     <div class="folio-item__thumb">
-                        <a class="folio-item__thumb-link" href="images/portfolio/gallery/g-building-blocks.jpg" title="Building Blocks" data-size="1050x700">
-                            <img src="images/portfolio/building-blocks.jpg" 
-                                 srcset="images/portfolio/building-blocks.jpg 1x, images/portfolio/building-blocks@2x.jpg 2x" alt="">
-                        </a>
+                        <a class="folio-item__thumb-link" href="images/robot.jpg" Title="自律ロボット" data-size="1050x700">
+							
+                            <img src="images/robot.jpg" 
+                                 swrcset="images/portfolio/shout-and-jump.jpg 1x, images/portfolio/shout-and-jump@2x.jpg 2x" alt="">
+							
+							                       </a>
                     </div>
                     <div class="folio-item__info">
-                        <div class="folio-item__cat">Frontend Design</div>
-                        <h4 class="folio-item__title">Building Blocks</h4>
+                        <div class="folio-item__cat">自律ロボット</div>
+                        <h4 class="folio-item__title">サッカーできるロボットをプログラム</h4>
                     </div>
+					<!--
                     <a href="https://www.behance.net/" title="Project Link" class="folio-item__project-link">Project Link</a>
                     <div class="folio-item__caption">
                         <p>Vero molestiae sed aut natus excepturi. Et tempora numquam. Temporibus iusto quo.Unde dolorem corrupti neque nisi.</p>
                     </div>
+				-->
                 </div>
             </div> <!-- end column -->
             <div class="column" data-aos="fade-up">
                 <div class="folio-item">
                     <div class="folio-item__thumb">
-                        <a class="folio-item__thumb-link" href="images/portfolio/gallery/g-shout-jump.jpg" Title="Shout and Jump" data-size="1050x700">
-                            <img src="images/portfolio/shout-and-jump.jpg" 
-                                 srcset="images/portfolio/shout-and-jump.jpg 1x, images/portfolio/shout-and-jump@2x.jpg 2x" alt="">
+                        <a class="folio-item__thumb-link" href="images/CARD_java.jpg" title="トランプ" data-size="1050x700">
+                            <img src="images/CARD_java.jpg" 
+                                 shrcset="images/portfolio/sand-dunes.jpg 1x, images/portfolio/sand-dunes@2x.jpg 2x" alt="">
                         </a>
                     </div>
                     <div class="folio-item__info">
-                        <div class="folio-item__cat">Branding</div>
-                        <h4 class="folio-item__title">Shout & Jump</h4>
+                        <div class="folio-item__cat">JAVA</div>
+                        <h4 class="folio-item__title">じゃんけんゲーム</h4>
                     </div>
+					<!--
                     <a href="https://www.behance.net/" title="Project Link" class="folio-item__project-link">Project Link</a>
                     <div class="folio-item__caption">
                         <p>Vero molestiae sed aut natus excepturi. Et tempora numquam. Temporibus iusto quo.Unde dolorem corrupti neque nisi.</p>
                     </div>
+				-->
                 </div>
-            </div> <!-- end column -->
-            <div class="column" data-aos="fade-up">
-                <div class="folio-item">
-                    <div class="folio-item__thumb">
-                        <a class="folio-item__thumb-link" href="images/portfolio/gallery/g-sand-dunes.jpg" title="Sand Dunes" data-size="1050x700">
-                            <img src="images/portfolio/sand-dunes.jpg" 
-                                 srcset="images/portfolio/sand-dunes.jpg 1x, images/portfolio/sand-dunes@2x.jpg 2x" alt="">
-                        </a>
-                    </div>
-                    <div class="folio-item__info">
-                        <div class="folio-item__cat">Frontend Design</div>
-                        <h4 class="folio-item__title">Sand Dunes</h4>
-                    </div>
-                    <a href="https://www.behance.net/" title="Project Link" class="folio-item__project-link">Project Link</a>
-                    <div class="folio-item__caption">
-                        <p>Vero molestiae sed aut natus excepturi. Et tempora numquam. Temporibus iusto quo.Unde dolorem corrupti neque nisi.</p>
-                    </div>
-                </div>
-            </div> <!-- end column -->
+            </div> 
+			<!--
             <div class="column" data-aos="fade-up">
                 <div class="folio-item">
                     <div class="folio-item__thumb">
@@ -476,7 +508,7 @@
                         <p>Vero molestiae sed aut natus excepturi. Et tempora numquam. Temporibus iusto quo.Unde dolorem corrupti neque nisi.</p>
                     </div>
                 </div>
-            </div> <!-- end column -->
+            </div> 
             <div class="column" data-aos="fade-up">
                 <div class="folio-item">
                     <div class="folio-item__thumb">
@@ -494,7 +526,8 @@
                         <p>Vero molestiae sed aut natus excepturi. Et tempora numquam. Temporibus iusto quo.Unde dolorem corrupti neque nisi.</p>
                     </div>
                 </div>
-            </div> <!-- end column -->
+            </div>
+		--> <!-- end column -->
 
         </div> <!-- folio-list -->
 
@@ -503,6 +536,7 @@
 
     <!-- testimonials
     ================================================== -->
+	<!--
     <section id="testimonials" class="s-testimonials">
 
         <div class="row collapse">
@@ -524,7 +558,7 @@
                                 <span>CEO, Apple</span>
                             </cite>
                         </div>
-                    </div> <!-- end testimonials__slide -->
+                    </div> !-- end testimonials__slide --
     
                     <div class="testimonial-slider__slide">
                         <p>
@@ -539,7 +573,7 @@
                                 <span>CEO, Google</span>
                             </cite>
                         </div>
-                    </div> <!-- end testimonials__slide -->
+                    </div> -- end testimonials__slide --
     
                     <div class="testimonial-slider__slide">
                         <p>
@@ -554,7 +588,7 @@
                                 <span>CEO, Microsoft</span>
                             </cite>
                         </div>
-                    </div> <!-- end testimonials__slide -->
+                    </div> -- end testimonials__slide --
     
                     <div class="testimonial-slider__slide">
                         <p>
@@ -569,16 +603,16 @@
                                 <span>CEO, Amazon</span>
                             </cite>
                         </div>
-                    </div> <!-- end testimonials__slide -->
+                    </div> -- end testimonials__slide -
 
-                </div> <!-- end testimonial slider -->
+                </div> <- end testimonial slider --
                 
-            </div> <!-- end column -->
+            </div> -- end column --
 
-        </div> <!-- end row -->
+        </div> <- end row --
 
 		
-        <!-- CTA
+        -- CTA
         ================================================== -->
 		<!--
         <div class="s-cta">
@@ -603,10 +637,10 @@
                 </div>
             </div> 
     
-        </div> //end s-cta -->
+        </div> //end s-cta --
 
 
-    </section> <!-- end s-testimonials -->
+    </section> !- end s-testimonials -->
 
 
     <!-- footer
@@ -622,12 +656,12 @@
 
                     <h1 class="display-1">
                     Have an idea or a concept that really excite you?
-                    Let's turn that idea into reality. Shoot me a message.
+                     Shoot me a message.
                     </h1>
                 </div>
 
                 <div class="footer-email-us">
-                    <a href="mailto:#0" class="btn btn--primary h-full-width">Let's Talk</a>
+                    <a href="mailto:t.sasaki.revol@gmail.com" class="btn btn--primary h-full-width">Let's Talk</a>
                 </div>
             </div>
 
@@ -638,27 +672,29 @@
                             Email
                         </h5>
                         <p class="footer-contact-block__content">
-                            <a href="mailto:#0">sayhello@ethos.com</a>
+                            <a href="mailto:t.sasaki.revol@gmail.com">t.sasaki.revol@gmail.com</a>
                         </p>
                     </div> <!-- end footer-contact-block -->
                     <div class="footer-contact-block" data-aos="fade-up">
-                        <h5 class="footer-contact-block__header">
-                            Phone
+                        <h5 class="footer-contact-block__header" >
+                            Github
                         </h5>
                         <p class="footer-contact-block__content">
-                            <a href="tel:+1975432345">+197 543 2345</a>
+                            <a href="https://github.com/tasuku-revol">Public Repos</a>
                         </p>
                     </div> <!-- end footer-contact-block -->
                     <br>
                     <div class="footer-contact-block" data-aos="fade-up">
                         <h5 class="footer-contact-block__header">
-                            Social
+                            Related
                         </h5>
                         <ul class="footer-contact-block__list">
-                            <li><a href="#0">Twitter</a></li>
-                            <li><a href="#0">Instagram</a></li>
+                            <li><a href="https://re-vol.net">Re-VOL.</a></li>
+                            <li><a href="#0">TechHub</a></li>
+							<!--
                             <li><a href="#0">Behance</a></li>
                             <li><a href="#0">Dribbble</a></li>
+							-->
                         </ul>
                     </div> <!-- end footer-contact-block -->
                 </div>

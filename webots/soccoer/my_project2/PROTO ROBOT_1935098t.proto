@@ -1,0 +1,280 @@
+PROTO ROBOT_1935098t [
+]
+{
+Robot {
+  translation 0.2803052604313733 0.03979968571611621 0.19784074114513509
+  rotation -0.0008475849966398567 0.9999995888122937 0.00032245141816901143 0.5190535340618655
+  children [
+    LightSensor {
+      translation 0.02 0.042 0.042
+      rotation 0 1 0 -1.07
+      name "ls1"
+    }
+    LightSensor {
+      translation -0.02 0.045 0.042
+      rotation 0 1 0 -2.07
+      name "ls0"
+    }
+    DEF BODY Shape {
+      appearance PBRAppearance {
+        baseColor 1 0 0
+        roughness 1
+        metalness 0
+      }
+      geometry Box {
+        size 0.1 0.06 0.1
+      }
+    }
+    HingeJoint {
+      jointParameters HingeJointParameters {
+        position 1801.4201980476937
+        anchor -0.606 0 0
+      }
+      device [
+        RotationalMotor {
+          name "wheel2"
+        }
+      ]
+      endPoint DEF WHEEL2 Solid {
+        translation -0.06000000000000327 0 0
+        rotation -0.4405304260069822 0.4405263068994195 -0.7822208874043605 4.469204641267174
+        children [
+          DEF WHEEL Shape {
+            appearance PBRAppearance {
+              baseColor 0 0 0
+              roughness 1
+              metalness 0
+            }
+            geometry Cylinder {
+              height 0.02
+              radius 0.04
+            }
+          }
+        ]
+        name "solid(1)"
+        boundingObject USE WHEEL
+        physics Physics {
+        }
+        linearVelocity 0.004726126255708832 -1.625462162989387e-05 0.00834722637381826
+        angularVelocity 0.2088091706928709 -0.0004641605064454455 -0.11831399183178044
+      }
+    }
+    HingeJoint {
+      jointParameters HingeJointParameters {
+        position 1811.6191693050655
+        anchor 0.06 0 0
+      }
+      device [
+        RotationalMotor {
+          name "wheel1"
+        }
+      ]
+      endPoint DEF WHEEL1 Solid {
+        translation 0.06000004033981071 3.3243159423682985e-06 -3.112994077715534e-06
+        rotation -0.4347430203069042 0.4629376246201542 0.772455346285777 1.8864377894997064
+        children [
+          DEF WHEEL Shape {
+            appearance PBRAppearance {
+              baseColor 0 0 0
+              roughness 1
+              metalness 0
+            }
+            geometry Cylinder {
+              height 0.02
+              radius 0.04
+            }
+          }
+        ]
+        boundingObject USE WHEEL
+        physics Physics {
+        }
+        linearVelocity 0.0047547702806607795 8.670904097095348e-05 0.008397327033949135
+        angularVelocity 0.2088087296965153 -0.0004647522933816305 -0.11831435163512326
+      }
+    }
+    Solid {
+      translation 0 -0.03 -0.04
+      children [
+        DEF CASTER Shape {
+          appearance PBRAppearance {
+            baseColor 0 0 0
+            metalness 0
+          }
+          geometry Sphere {
+            radius 0.01
+          }
+        }
+      ]
+      name "solid(2)"
+      boundingObject USE CASTER
+      physics Physics {
+      }
+    }
+    Solid {
+      translation 0 -0.03 0.04
+      children [
+        DEF CASTER Shape {
+          appearance PBRAppearance {
+            baseColor 0 0 0
+            metalness 0
+          }
+          geometry Sphere {
+            radius 0.01
+          }
+        }
+      ]
+      name "solid(3)"
+      boundingObject USE CASTER
+      physics Physics {
+      }
+    }
+  ]
+  boundingObject USE BODY
+  physics Physics {
+  }
+  controller "test_6_14_2"
+  controllerArgs [
+    ""
+  ]
+  linearVelocity 0.004740940157755474 3.446462594429091e-05 0.008372166764422465
+  angularVelocity 0.0004209815974316564 -0.0004727794302388827 0.0007409058355543226
+}
+Floor {
+  size 1.8 2.4
+}
+DEF WALL_1 Solid {
+  translation -0.9 0.05 0
+  children [
+    Shape {
+      appearance DEF WALL_APPEARANCE PBRAppearance {
+        baseColor 0 0 0
+        roughness 0.5
+        metalness 0
+      }
+      geometry DEF WALL_X_GEOMETRY Box {
+        size 0.01 0.1 2.4
+      }
+    }
+  ]
+  boundingObject USE WALL_X_GEOMETRY
+}
+DEF WALL_2 Solid {
+  translation 0.9 0.05 0
+  children [
+    Shape {
+      appearance USE WALL_APPEARANCE
+      geometry USE WALL_X_GEOMETRY
+    }
+  ]
+  name "solid(1)"
+  boundingObject USE WALL_X_GEOMETRY
+}
+DEF WALL_3 Solid {
+  translation 0 0.05 -1.2
+  children [
+    Shape {
+      appearance USE WALL_APPEARANCE
+      geometry DEF WALL_Y_GEOMETRY Box {
+        size 1.8 0.1 0.01
+      }
+    }
+  ]
+  name "solid(2)"
+  boundingObject USE WALL_Y_GEOMETRY
+}
+DEF WALL_4 Solid {
+  translation 0 0.05 1.2
+  children [
+    Shape {
+      appearance USE WALL_APPEARANCE
+      geometry USE WALL_Y_GEOMETRY
+    }
+  ]
+  name "solid(3)"
+  boundingObject USE WALL_Y_GEOMETRY
+}
+DEF GOAL_RED Solid {
+  translation 0 0.04 1
+  children [
+    DEF GOAL1 Group {
+      children [
+        Shape {
+          appearance DEF GOAL_BLUE PBRAppearance {
+            baseColor 0.000106813 0.00175479 0.998215
+            metalness 0
+          }
+          geometry Box {
+            size 0.6 0.08 0.01
+          }
+        }
+        Transform {
+          translation -0.3 0 -0.05
+          children [
+            Shape {
+              appearance USE GOAL_BLUE
+              geometry Box {
+                size 0.01 0.08 0.1
+              }
+            }
+          ]
+        }
+        Transform {
+          translation 0.3 0 -0.05
+          children [
+            Shape {
+              appearance USE GOAL_BLUE
+              geometry Box {
+                size 0.01 0.08 0.1
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+  name "solid(5)"
+  boundingObject USE GOAL1
+}
+DEF GOAL_YELL Solid {
+  translation 0 0.04 -1
+  children [
+    DEF GOAL2 Group {
+      children [
+        Shape {
+          appearance DEF GOAL_YELLOW PBRAppearance {
+            baseColor 1 0.999939 0.0410315
+            metalness 0
+          }
+          geometry Box {
+            size 0.6 0.08 0.01
+          }
+        }
+        Transform {
+          translation -0.3 0 0.05
+          children [
+            Shape {
+              appearance USE GOAL_YELLOW
+              geometry Box {
+                size 0.01 0.08 0.1
+              }
+            }
+          ]
+        }
+        Transform {
+          translation 0.3 0 0.05
+          children [
+            Shape {
+              appearance USE GOAL_YELLOW
+              geometry Box {
+                size 0.01 0.08 0.1
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+  name "solid(6)"
+  boundingObject USE GOAL2
+}
+}

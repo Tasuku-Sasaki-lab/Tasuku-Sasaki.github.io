@@ -1,0 +1,81 @@
+.tittle2{
+	color:#FFB6C1;
+	border-left: solid thick #FFB6C1;
+}
+
+.tittle3{
+	border-bottom: groove #FFB6C1;;
+}
+
+td{
+	color:#555;
+}
+
+.daily_a{
+	color: PaleVioletRed;
+}
+
+/**
+.tittle_img{
+	position: relative;
+}
+**/
+
+.background{
+	background: url("../img/sci-fi-2992797_1920-2.jpg");
+	background-size: cover;
+}
+
+.tittle{
+	background: rgba(0, 0, 0, 0);
+	width: 100%;
+	height: 100%;
+	position: relative;
+}
+
+.tittle_inner{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	line-height: 1.25;
+	color: white;
+}
+
+@media  screen and (min-width:1301px) {
+
+
+	.p-tittle-1{
+		font-size: 3.5em;
+		letter-spacing: 1.5em;
+	}
+
+	.p-tittle-2{
+		font-size: 1.5em;
+	}
+}
+
+@media screen and (min-width:481px) and (max-width:1300px) {
+
+
+	.p-tittle-1{
+		font-size: 3.0em;
+		letter-spacing: 1.0em;
+	}
+
+	.p-tittle-2{
+		font-size: 1.0em;
+	}
+}
+
+@media  screen and (max-width:480px) {
+	.p-tittle-1{
+		font-size: 2.5em;
+		letter-spacing: 0.25em;
+	}
+
+	.p-tittle-2{
+		font-size: 1.0em;
+	}
+}
+

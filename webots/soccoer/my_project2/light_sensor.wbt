@@ -1,0 +1,233 @@
+#VRML_SIM R2021a utf8
+WorldInfo {
+  info [
+    "Example use of a LightSensor device."
+  ]
+  title "Light Sensor"
+  basicTimeStep 8
+  coordinateSystem "NUE"
+}
+Viewpoint {
+  orientation 0.3018728588640886 0.9371704186477365 0.17488391433419023 5.099927327009288
+  position -0.23135454605504882 0.16079585691145937 0.3005175337637555
+}
+TexturedBackground {
+}
+RectangleArena {
+  translation -0.0905037 -7.77156e-15 0.000388046
+}
+DEF LAMP Solid {
+  translation -0.1 0.095 0
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.8 0.8 0.8
+        roughness 1
+        metalness 0
+        emissiveColor 1 1 1
+      }
+      geometry Sphere {
+        radius 0.01
+      }
+    }
+    PointLight {
+      attenuation 0 0 5
+    }
+  ]
+}
+DEF ROBOT Robot {
+  translation -0.07101072332655443 -4.616466280141923e-05 0.17575058636166604
+  rotation -0.051086015029165203 0.9985635570876069 0.01615677953632812 0.6132767246406284
+  children [
+    Transform {
+      translation 0 0.0415 0
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.0820075 0.364731 0.8
+            roughness 1
+            metalness 0
+          }
+          geometry DEF BODY Cylinder {
+            height 0.08
+            radius 0.045
+          }
+        }
+      ]
+    }
+    HingeJoint {
+      jointParameters HingeJointParameters {
+        position 61.515173707434684
+        axis -1 0 0
+        anchor 0 0.025 0
+      }
+      device [
+        RotationalMotor {
+          name "left wheel motor"
+          consumptionFactor 70
+        }
+        PositionSensor {
+          name "left wheel sensor"
+        }
+      ]
+      endPoint Solid {
+        translation -0.04499999999999999 0.025 0
+        rotation -1 0 0 6.2650212493116
+        children [
+          DEF WHEEL Transform {
+            rotation 0 0 1 1.57
+            children [
+              Shape {
+                appearance PBRAppearance {
+                  baseColor 1 0 0
+                  roughness 1
+                  metalness 0
+                }
+                geometry Cylinder {
+                  height 0.01
+                  radius 0.025
+                }
+              }
+            ]
+          }
+        ]
+        name "left wheel"
+        boundingObject USE WHEEL
+        physics DEF PHYSICS_WHEEL Physics {
+          density -1
+          mass 0.05
+        }
+        linearVelocity -3.3204115161674345e-14 4.025956143720445e-17 -4.7153997464762697e-14
+        angularVelocity -2.3659056479457348e-12 -2.3334027474839446e-14 1.6758218004082801e-12
+      }
+    }
+    HingeJoint {
+      jointParameters HingeJointParameters {
+        position 52.8277654872866
+        axis -1 0 0
+        anchor 0 0.025 0
+      }
+      device [
+        RotationalMotor {
+          name "right wheel motor"
+          consumptionFactor 70
+        }
+        PositionSensor {
+          name "right wheel sensor"
+        }
+      ]
+      endPoint Solid {
+        translation 0.04499999999999997 0.025 0
+        rotation 1 0 0 2.025066969474329
+        children [
+          USE WHEEL
+        ]
+        name "right wheel"
+        boundingObject USE WHEEL
+        physics USE PHYSICS_WHEEL
+        linearVelocity -3.220190828593709e-14 -6.607661352769991e-17 -4.51503926835811e-14
+        angularVelocity -2.276486681637006e-12 -2.2647334554156977e-14 1.5939509825833253e-12
+      }
+    }
+    Transform {
+      translation 0.02 0.063 -0.0385
+      rotation 0 1 0 2.7489
+      children [
+        DEF UNUSED_EYE Group {
+          children [
+            Transform {
+              translation 0 0 -1e-05
+              rotation 0 0 1 0.8
+              children [
+                Shape {
+                  appearance PBRAppearance {
+                    baseColor 0.975691 0.981481 0.0252992
+                    roughness 1
+                    metalness 0
+                  }
+                  geometry Box {
+                    size 0.02 0.005 0.005
+                  }
+                }
+              ]
+            }
+            Transform {
+              rotation 0 0 1 -0.8
+              children [
+                Shape {
+                  appearance PBRAppearance {
+                    baseColor 0.975691 0.981481 0.0252992
+                    roughness 1
+                    metalness 0
+                  }
+                  geometry Box {
+                    size 0.02 0.005 0.005
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+    Transform {
+      translation -0.02 0.063 -0.0385
+      rotation 0 1 0 0.3927
+      children [
+        USE UNUSED_EYE
+      ]
+    }
+    LightSensor {
+      translation -0.02 0.07 -0.042
+      rotation 0 1 0 2.07
+      name "ls0"
+      lookupTable [
+        0 0 0
+        4 1024 0
+      ]
+    }
+    LightSensor {
+      translation 0.02 0.07 -0.042
+      rotation 0 1 0 1.07
+      name "ls1"
+      lookupTable [
+        0 0 0
+        4 1024 0
+      ]
+    }
+    DEF SMILE Transform {
+      translation 0 0.025 -0.036
+      rotation 0.7745972408364944 0.44721228048294853 0.4472139204829502 1.8234794
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.721569 0.290196 0.290196
+            roughness 1
+            metalness 0
+          }
+          geometry Cylinder {
+            height 0.018
+            radius 0.009
+            subdivision 3
+          }
+        }
+      ]
+    }
+  ]
+  name "MyBot"
+  boundingObject Transform {
+    translation 0 0.0415 0
+    children [
+      USE BODY
+    ]
+  }
+  physics Physics {
+    density -1
+    mass 0.5
+  }
+  controller "my_controller"
+  linearVelocity -3.2285609443069e-14 8.810729923425242e-16 -4.539700020587755e-14
+  angularVelocity 3.4706506019411635e-14 -2.3491873784760188e-14 -1.614308116593515e-14
+}
+TexturedBackgroundLight {
+}
