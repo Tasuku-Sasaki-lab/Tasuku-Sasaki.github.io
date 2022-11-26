@@ -84,16 +84,16 @@
 	
 	<script type="text/javascript">
 		let image_data = document.getElementById('hero');
-		//console.log(window.innerWidth );
+		console.log(window.innerWidth );
 		if(window.innerWidth > 786){
-			//console.log('ok');
-			image_data.src="images/26955_2.jpg";
+			console.log('ok');
+			image_data.data-image-src="images/26955_3.jpg";
 		}
 		</script>
 
-    <!-- hero
+    <!-- herodata-image-src="images/26955_3.jpg"
     ================================================== -->
-    <section id="hero" class="s-hero target-section" data-parallax="scroll" data-image-src="images/26955_3.jpg" data-natural-width=1500 data-natural-height=2000 data-position-y=center>
+    <section id="hero" class="s-hero target-section" data-parallax="scroll" data-image-src="./images/hero-pre-image.jpeg"  data-position-y=center>
 
 
 
@@ -163,6 +163,7 @@
 
                     <h3>Skills</h3>
                     <p data-aos="fade-up">
+			    GO,C,Python,Java,Javascriptなど
 					<br>
                     サーバーサイドが得意
                     </p>
@@ -529,13 +530,9 @@
     ================================================== -->
 	<!--
     <section id="testimonials" class="s-testimonials">
-
         <div class="row collapse">
-
             <div class="column large-full">
-
                 <div class="testimonial-slider" data-aos="fade-up">
-
                     <div class="testimonial-slider__slide">
                         <p>
                         Molestiae incidunt consequatur quis ipsa autem nam sit enim magni. Voluptas tempore rem. 
@@ -595,19 +592,15 @@
                             </cite>
                         </div>
                     </div> -- end testimonials__slide -
-
                 </div> <- end testimonial slider --
                 
             </div> -- end column --
-
         </div> <- end row --
-
 		
         -- CTA
         ================================================== -->
 		<!--
         <div class="s-cta">
-
             <div class="row">
                 <div class="column large-full">
                     <h2 class="section-desc" data-aos="fade-up">
@@ -629,8 +622,6 @@
             </div> 
     
         </div> //end s-cta --
-
-
     </section> !- end s-testimonials -->
 
 
