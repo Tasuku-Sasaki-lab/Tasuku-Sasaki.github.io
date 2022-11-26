@@ -2578,7 +2578,7 @@ html.no-csstransitions .hero-content {
 
   .s-about__section--profile::before,
   .s-about__section--profile .profile-pic {
-    display: block;
+    display: none;
   }
 
   .position {
